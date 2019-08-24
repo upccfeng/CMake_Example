@@ -1,0 +1,43 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "(gdb) Pipe Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "/entryfolder/test_prog",
+            "args": [],
+            "cwd": "~/",
+            "environment": [],
+            "preLaunchTask": "Build",
+            "externalConsole": true,
+            "sourceFileMap": {
+                "/entryfolder": "${workspaceFolder}", //mapping the source code to local
+                //YOU SHOULD SYNC REMOTE'S GLOBAL LIB TO LOCAL FIRST.
+                "/": "D:\\Project\\Docker\\RemoteSource" //Mapping the lib to local 
+            },
+            "miDebuggerPath": "/usr/bin/gdb",
+            "pipeTransport": {
+                "debuggerPath": "/usr/bin/gdb",
+                "pipeProgram": "C:\\Windows\\System32\\OpenSSH\\ssh.exe",
+                "pipeArgs": [
+                    //YOU SHOULD PUT YOUR PUBLIC KEY TO REMOTE ENV FIRST FOR REMOTE DEBUGGING.
+                    "-p 2222",
+                    "root@localhost"
+                ],
+                "pipeCwd": "",
+            },
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+    ]
+}

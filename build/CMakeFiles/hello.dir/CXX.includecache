@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/entryfolder/cpptest/build/config.h
+
+/entryfolder/cpptest/common/common.hpp
+iostream
+-
+
+/entryfolder/cpptest/main.cpp
+iostream
+-
+build/config.h
+/entryfolder/cpptest/build/config.h
+common/common.hpp
+/entryfolder/cpptest/common/common.hpp
+

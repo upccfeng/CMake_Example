@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/entryfolder/cpptest/common/common.cpp
+common.hpp
+/entryfolder/cpptest/common/common.hpp
+
+/entryfolder/cpptest/common/common.hpp
+iostream
+-
+
